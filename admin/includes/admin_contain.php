@@ -7,6 +7,15 @@
                             Blank Page
                             <small>Subheading</small>
                         </h1>
+
+            <?php 
+            if($Database->conn){
+                echo "true";
+            }
+            
+            
+            ?>
+
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
