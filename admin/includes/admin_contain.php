@@ -7,15 +7,13 @@
                             Blank Page
                             <small>Subheading</small>
                         </h1>
-
-            <?php 
-            if($Database->conn){
-                echo "true";
-            }
-            
-            
-            ?>
-
+                <?php
+             $sql="SELECT * FROM user WHERE id=1";
+             $result=$Database->query($sql);
+             $user_found=mysqli_fetch_assoc($result);
+             echo $user_found['user_name'];
+             
+                 ?>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
