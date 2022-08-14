@@ -8,10 +8,17 @@
                             <small>Subheading</small>
                         </h1>
                 <?php
-             $sql="SELECT * FROM user WHERE id=1";
-             $result=$Database->query($sql);
-             $user_found=mysqli_fetch_assoc($result);
-             echo $user_found['user_name'];
+            //   use static function
+                $result = user::find_all_users();
+                while($row = mysqli_fetch_array($result)){
+                 $id = $row['id'];   
+                 $user = $row['user_name'];
+                 $pass = $row['pass'];
+                 $first_name = $row['first_name'];
+             $last_name = $row['last_name'];
+                }
+                $user = user:: find_user_id(1);
+                echo $user['user_name'];
              
                  ?>
                         <ol class="breadcrumb">

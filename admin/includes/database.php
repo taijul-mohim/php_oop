@@ -14,7 +14,7 @@ public function open_db() {
 // conn data base
   $this->conn = new mysqli(DB_HOST,DB_User,DB_PASS,DB_NAME);
 
-  if($this->conn->mysqli_errno) {
+  if($this->conn->connect_errno) {
 
   die("Database Connection Faild badly".$this->conn->connect_error );
   
