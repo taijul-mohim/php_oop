@@ -17,15 +17,10 @@
             //      $first_name = $row['first_name'];
             //  $last_name = $row['last_name'];
             //     }
-                $found_user = user:: find_user_id(1);
-                $user=new user();
-                 echo $user->user_name=$found_user['user_name'];
-                 echo"<br>";
-                 echo $user->first_name=$found_user['first_name'];
-                 echo"<br>";
-                 echo $user->last_name=$found_user['last_name'];
-        
-
+                $found_user = user:: find_user_id(2);
+                 $user = user::instantation($found_user);
+                 echo $user->user_name;
+      
               
                  ?>
                         <ol class="breadcrumb">
